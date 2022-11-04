@@ -97,9 +97,9 @@ Now you can add Windows-compatible versions of Flannel and kube-proxy. In order 
 ```bash
 # Make sure to modify the version of kube-proxy image to match your kubernetes version
 # before applying it
-wget https://raw.githubusercontent.com/kubernetes-sigs/sig-windows-tools/master/hostprocess/flannel/kube-proxy/kube-proxy.yml
+wget https://raw.githubusercontent.com/kubernetes-sigs/sig-windows-tools/Add-guide-for-hostprocess-calico-and-flannel/hostprocess/flannel/kube-proxy/kube-proxy.yml
 kubectl apply -f sig-windows-tools/hostprocess/flannel/kube-proxy/kube-proxy.yml
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/sig-windows-tools/master/hostprocess/flannel/flanneld/flannel-overlay.yml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/sig-windows-tools/Add-guide-for-hostprocess-calico-and-flannel/hostprocess/flannel/flanneld/flannel-overlay.yml
 ```
 
 >  **Note** If you are using another version of kubernetes on your Windows node, change v1.24.3 with your own version .
@@ -110,7 +110,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/sig-windows-t
 Next you will need to apply the configuration that allows flannel to spawn pods and keep them running:
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/sig-windows-tools/master/kubeadm/flannel/kube-flannel-rbac.yml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/sig-windows-tools/Add-guide-for-hostprocess-calico-and-flannel/kubeadm/flannel/kube-flannel-rbac.yml
 ```
 
 
@@ -164,9 +164,9 @@ Now you can add Windows-compatible versions of calico and kube-proxy. In order t
 ```bash
 # Make sure to modify the version of kube-proxy image to match your kubernetes version
 # before applying it
-wget https://raw.githubusercontent.com/kubernetes-sigs/sig-windows-tools/master/hostprocess/calico/kube-proxy/kube-proxy.yml
+wget https://raw.githubusercontent.com/kubernetes-sigs/sig-windows-tools/Add-guide-for-hostprocess-calico-and-flannel/hostprocess/calico/kube-proxy/kube-proxy.yml
 kubectl apply -f kube-proxy.yml
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/sig-windows-tools/master/hostprocess/calico/calico.yml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/sig-windows-tools/Add-guide-for-hostprocess-calico-and-flannel/hostprocess/calico/calico.yml
 ```
 
 >  **Note** To find your version of kubernetes run the following command:
@@ -176,7 +176,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/sig-windows-t
 Next you will need to apply the configuration that allows calico to spawn pods and keep them running:
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/sig-windows-tools/master/hostprocess/calico/kube-calico-rbac.yml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/sig-windows-tools/Add-guide-for-hostprocess-calico-and-flannel/hostprocess/calico/kube-calico-rbac.yml
 ```
 
 
