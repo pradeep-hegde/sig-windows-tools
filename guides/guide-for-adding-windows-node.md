@@ -97,9 +97,9 @@ Now you can add Windows-compatible versions of Flannel and kube-proxy. In order 
 ```bash
 # Make sure to modify the version of kube-proxy image to match your kubernetes version
 # before applying it
-wget https://raw.githubusercontent.com/kubernetes-sigs/sig-windows-tools/Add-guide-for-hostprocess-calico-and-flannel/hostprocess/flannel/kube-proxy/kube-proxy.yml
+wget https://raw.githubusercontent.com/pradeep-hegde/sig-windows-tools/Add-guide-for-hostprocess-calico-and-flannel/hostprocess/flannel/kube-proxy/kube-proxy.yml
 kubectl apply -f sig-windows-tools/hostprocess/flannel/kube-proxy/kube-proxy.yml
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/sig-windows-tools/Add-guide-for-hostprocess-calico-and-flannel/hostprocess/flannel/flanneld/flannel-overlay.yml
+kubectl apply -f https://raw.githubusercontent.com/pradeep-hegde/sig-windows-tools/Add-guide-for-hostprocess-calico-and-flannel/hostprocess/flannel/flanneld/flannel-overlay.yml
 ```
 
 >  **Note** If you are using another version of kubernetes on your Windows node, change v1.24.3 with your own version .
